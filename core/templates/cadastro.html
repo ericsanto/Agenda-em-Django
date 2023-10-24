@@ -1,0 +1,22 @@
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% bootstrap_css %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class=col-md-4>
+      <form action="{% url 'cadastro' %}" method="post" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn btn-primary">Cadastre-se</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

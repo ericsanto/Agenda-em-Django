@@ -1,0 +1,19 @@
+{% extends 'home.html' %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+
+{% block main %}
+  <div class="text-center">
+    <h1>Editar Contato</h1>
+  </div>
+  <div class="container">
+  <br>
+  <form action="" method="post" autocomplete="off">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <br>
+    <button class="btn btn-success">Editar</button>
+</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'home.html' %}
+{% load bootstrap4 %}
+{% block main %}
+{% bootstrap_css %}
+<div class="container-fluid">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Telefone</th>
+        <th scope="col">Email</th>
+        <th scope="col">Categoria</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+          <td scope="row">{{ contatos.numero_de_telefone }}</td>
+          <td scope="row">{{ contatos.email }}</td>
+          <td scope="row">{{ contatos.categoria }}</td>
+        </tr>
+    </tbody>
+</div>
+
+{% endblock %}
+
+
+{% block footer %}
+{% endblock %}

@@ -1,0 +1,24 @@
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% bootstrap_css %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  {% block menu %}
+  <a href="{% url 'home' %}">Volta a tela inicial</a>
+  <div class="container">
+    <form action="{% url 'login' %}" class="form" method="post">
+      {% csrf_token %}
+      {% bootstrap_form form %}
+      <button type="submit" class="btn btn-primary">login</button>
+    </form>
+  </div>
+  {% endblock %}
+</body>
+</html>
